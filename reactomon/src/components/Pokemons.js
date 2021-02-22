@@ -25,9 +25,9 @@ class Pokemons extends Component {
             pokemons.map(pokemon =>{
                 return(
                     <div className="container">
-                        <div className='post card center' key={Math.random()}>
-                            <div className="card-content">
-                                <span className="card-title"><Link to={pokemon.url}>{pokemon.name}</Link></span>
+                        <div className='card center' key={Math.random()}>
+                            <div className="card-content  hoverable">
+                            <Link to='/pokemonDetail'><span className="card-title menue">{pokemon.name}</span></Link>
                             </div>
                          </div>
                     </div>
@@ -35,7 +35,20 @@ class Pokemons extends Component {
                 )
             })
         ):(
-            <div className='center'> Loading...</div>
+            <div className='center'>
+                 <div class="preloader-wrapper big active">
+                 <div class="spinner-layer spinner-blue">
+                        <div className="circle-clipper left">
+                        <div className="circle"></div>
+                        </div><div className="gap-patch">
+                        <div className="circle"></div>
+                        </div><div className="circle-clipper right">
+                        <div className="circle"></div>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
         )
 
         return(

@@ -28,15 +28,28 @@ class Types extends Component {
                 return(
                     <div className="container">
                         <div className='post card center' key={Math.random()}>
-                            <div className="card-content">
-                                <span className="card-title"><Link to={type.url}>{type.name}</Link></span>
+                            <div className="card-content  hoverable">
+                            <Link to='/pokemonDetail'><span className="card-title menue">{type.name}</span></Link>
                             </div>
                          </div>
                     </div>
                 )
             })
         ) :(
-            <div className="center">Loading...</div>
+            <div className='center'>
+                 <div className="preloader-wrapper big active">
+                 <div className="spinner-layer spinner-blue">
+                        <div className="circle-clipper left">
+                        <div className="circle"></div>
+                        </div><div className="gap-patch">
+                        <div className="circle"></div>
+                        </div><div className="circle-clipper right">
+                        <div className="circle"></div>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
         )
         return ( 
             <h1>{typesList}</h1>
