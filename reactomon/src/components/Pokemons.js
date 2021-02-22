@@ -11,7 +11,7 @@ class Pokemons extends Component {
     componentDidMount(){
         axios.get('https://pokeapi.co/api/v2/pokemon')
             .then(res=>{
-                console.log(res)
+                // console.log(res)
                 this.setState({
                     pokemons:res.data.results
                   
